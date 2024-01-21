@@ -8,55 +8,55 @@
 import UIKit
 
 extension UIColor {
-    static var todayDetailCellTint: UIColor {
+    static var TodayDetailCellTint: UIColor {
         UIColor(named: "TodayDetailCellTint") ?? .tintColor
     }
 
-    static var todayListCellBackground: UIColor {
+    static var TodayListCellBackground: UIColor {
         UIColor(named: "TodayListCellBackground") ?? .secondarySystemBackground
     }
 
-    static var todayListCellDoneButtonTint: UIColor {
+    static var TodayListCellDoneButtonTint: UIColor {
         UIColor(named: "TodayListCellDoneButtonTint") ?? .tintColor
     }
 
-    static var todayGradientAllBegin: UIColor {
+    static var TodayGradientAllBegin: UIColor {
         UIColor(named: "TodayGradientAllBegin") ?? .systemFill
     }
 
-    static var todayGradientAllEnd: UIColor {
+    static var TodayGradientAllEnd: UIColor {
         UIColor(named: "TodayGradientAllEnd") ?? .quaternarySystemFill
     }
 
-    static var todayGradientFutureBegin: UIColor {
+    static var TodayGradientFutureBegin: UIColor {
         UIColor(named: "TodayGradientFutureBegin") ?? .systemFill
     }
 
-    static var todayGradientFutureEnd: UIColor {
+    static var TodayGradientFutureEnd: UIColor {
         UIColor(named: "TodayGradientFutureEnd") ?? .quaternarySystemFill
     }
 
-    static var todayGradientTodayBegin: UIColor {
+    static var TodayGradientTodayBegin: UIColor {
         UIColor(named: "TodayGradientTodayBegin") ?? .systemFill
     }
 
-    static var todayGradientTodayEnd: UIColor {
+    static var TodayGradientTodayEnd: UIColor {
         UIColor(named: "TodayGradientTodayEnd") ?? .quaternarySystemFill
     }
 
-    static var todayNavigationBackground: UIColor {
+    static var TodayNavigationBackground: UIColor {
         UIColor(named: "TodayNavigationBackground") ?? .secondarySystemBackground
     }
 
-    static var todayPrimaryTint: UIColor {
+    static var TodayPrimaryTint: UIColor {
         UIColor(named: "TodayPrimaryTint") ?? .tintColor
     }
 
-    static var todayProgressLowerBackground: UIColor {
+    static var TodayProgressLowerBackground: UIColor {
         UIColor(named: "TodayProgressLowerBackground") ?? .systemGray
     }
 
-    static var todayProgressUpperBackground: UIColor {
+    static var TodayProgressUpperBackground: UIColor {
         UIColor(named: "TodayProgressUpperBackground") ?? .systemGray6
     }
 }
