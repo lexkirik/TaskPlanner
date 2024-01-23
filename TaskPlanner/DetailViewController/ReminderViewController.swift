@@ -19,6 +19,7 @@ class ReminderViewController: UICollectionViewController {
     
     var workingReminder: Reminder
     var onChange: (Reminder) -> Void
+    var isAddingNewReminder = false
     private var dataSource: DataSource!
     
     init(reminder: Reminder, onChange: @escaping (Reminder) -> Void) {
@@ -59,7 +60,11 @@ class ReminderViewController: UICollectionViewController {
         if editing {
             prepareForEditing()
         } else {
-            prepareForViewing()
+            if isAddingNewReminder {
+                onChange(workingReminder)
+            } else {
+                prepareForViewing()
+            }
         }
     }
     
@@ -75,7 +80,7 @@ class ReminderViewController: UICollectionViewController {
         case (.date, .editableDate(let date)):
             cell.contentConfiguration = dateConfiguration(for: cell, with: date)
         case (.note, .editableText(let note)):
-            cell.contentConfiguration = noteConfiguration(for: cell, with: note!)
+            cell.contentConfiguration = noteConfiguration(for: cell, with: note ?? "")
         default:
             fatalError("Unexpected combination of section and row.")
         }
