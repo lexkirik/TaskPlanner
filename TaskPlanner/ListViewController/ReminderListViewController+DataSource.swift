@@ -58,17 +58,39 @@ extension ReminderListViewController {
     }
     
     func addReminder(_ reminder: Reminder) {
+        var reminder = reminder
+        do {
+            let idFromStore = try reminderStore.save(reminder)
+            reminder.id = idFromStore
+            reminders.append(reminder)
+        } catch TaskPlannerError.accesDenied {
+        } catch {
+            showError(error)
+        }
+        
         reminders.append(reminder)
     }
     
     func deleteReminder(withID id: Reminder.ID) {
-        let index = reminders.indexOfReminder(withId: id)
-        reminders.remove(at: index)
+        do {
+            try reminderStore.remove(with: id)
+            let index = reminders.indexOfReminder(withId: id)
+            reminders.remove(at: index)
+        } catch TaskPlannerError.accesDenied {
+        } catch {
+            showError(error)
+        }
     }
     
     func updateReminder(_ reminder: Reminder) {
-        let index = reminders.indexOfReminder(withId: reminder.id)
-        reminders[index] = reminder
+        do {
+            try reminderStore.save(reminder)
+            let index = reminders.indexOfReminder(withId: reminder.id)
+            reminders[index] = reminder
+        } catch TaskPlannerError.accesDenied {
+        } catch {
+            showError(error)
+        }
     }
     
     func completeReminder(withId id: Reminder.ID) {
@@ -83,6 +105,7 @@ extension ReminderListViewController {
             do {
                 try await reminderStore.requestAccess()
                 reminders = try await reminderStore.readAll()
+                NotificationCenter.default.addObserver(self, selector: #selector(eventStoreChanged(_:)), name: .EKEventStoreChanged, object: nil)
             } catch TaskPlannerError.accesDenied, TaskPlannerError.accessRestricted {
                 #if DEBUG
                 reminders = Reminder.sampleData
@@ -90,6 +113,13 @@ extension ReminderListViewController {
             } catch {
                 showError(error)
             }
+            updateSnapshot()
+        }
+    }
+    
+    func reminderStoreChanged() {
+        Task {
+            reminders = try await reminderStore.readAll()
             updateSnapshot()
         }
     }

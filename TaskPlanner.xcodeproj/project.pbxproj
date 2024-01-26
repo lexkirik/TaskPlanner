@@ -20,6 +20,7 @@
 		5268FC702B5ABE4D00D1DCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5268FC6F2B5ABE4D00D1DCBD /* Assets.xcassets */; };
 		5268FC732B5ABE4D00D1DCBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5268FC712B5ABE4D00D1DCBD /* LaunchScreen.storyboard */; };
 		5268FC7C2B5AC00B00D1DCBD /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268FC7B2B5AC00B00D1DCBD /* Reminder.swift */; };
+		5286C12E2B6370290030A186 /* EKReminder+Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286C12D2B6370290030A186 /* EKReminder+Reminder.swift */; };
 		529952CA2B60D5F600DDC4C4 /* ProgressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529952C92B60D5F600DDC4C4 /* ProgressHeaderView.swift */; };
 		52C03C672B5E6EB500C42AEC /* ReminderViewController+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C03C662B5E6EB500C42AEC /* ReminderViewController+CellConfiguration.swift */; };
 		52C03C6A2B5E728A00C42AEC /* UIView+PinnedSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C03C692B5E728A00C42AEC /* UIView+PinnedSubview.swift */; };
@@ -53,6 +54,7 @@
 		5268FC722B5ABE4D00D1DCBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5268FC742B5ABE4D00D1DCBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5268FC7B2B5AC00B00D1DCBD /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		5286C12D2B6370290030A186 /* EKReminder+Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKReminder+Reminder.swift"; sourceTree = "<group>"; };
 		529952C92B60D5F600DDC4C4 /* ProgressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderView.swift; sourceTree = "<group>"; };
 		52C03C662B5E6EB500C42AEC /* ReminderViewController+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+CellConfiguration.swift"; sourceTree = "<group>"; };
 		52C03C692B5E728A00C42AEC /* UIView+PinnedSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubview.swift"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				52F89DA92B621BDA00DEBE4E /* EKEventStore+AsyncFetch.swift */,
 				52F89DAB2B621E8A00DEBE4E /* Reminder+EKReminder.swift */,
 				52F89DAD2B62207000DEBE4E /* ReminderStore.swift */,
+				5286C12D2B6370290030A186 /* EKReminder+Reminder.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				5235987A2B611C1E005DC1BF /* CAGradientLayer+ListStyle.swift in Sources */,
 				52CB191D2B5BF875000CDC1A /* UIColor.swift in Sources */,
 				52F89DAE2B62207000DEBE4E /* ReminderStore.swift in Sources */,
+				5286C12E2B6370290030A186 /* EKReminder+Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
